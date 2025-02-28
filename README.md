@@ -22,11 +22,7 @@ This project leverages **time series analysis** to predict AQI values based on h
 
 ✅ **Real-Time AQI Updates** – Can be integrated with APIs to fetch live air quality data and improve predictions.  
 
-## 📽️ Demo  
 
-[![Watch the Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)  
-
-Click the image above to watch a live demo of the AQI Predictor!  
 
 ## 🛠 Tech Stack  
 
