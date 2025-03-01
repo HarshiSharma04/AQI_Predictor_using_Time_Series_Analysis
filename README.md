@@ -1,33 +1,58 @@
-# 🌍 AQI Predictor: Time Series-Based Air Quality Forecasting  
+# AQI Prediction and Time Series Analysis
 
-**AQI Predictor** is a machine learning model designed to **analyze and predict air quality index (AQI) trends** using **time series forecasting techniques**. It helps in identifying air pollution patterns, enabling better planning and awareness for environmental and health concerns.  
+## Project Overview
+This project focuses on analyzing and predicting the Air Quality Index (AQI) using a dataset containing air quality measurements from various cities. The dataset includes features such as `PM2.5`, `PM10`, `NO2`, `SO2`, `CO`, and other pollutants, along with the corresponding AQI values. The goal of this project is to:
+1. Perform **exploratory data analysis (EDA)** to understand trends and patterns in air quality.
+2. Conduct **time series analysis** to study AQI trends over time.
+3. Build **machine learning models** to predict AQI based on pollutant levels.
 
-## 📊 Overview  
+## Dataset
+The dataset used in this project is `city_day.csv`, which contains daily air quality measurements for multiple cities. Key features include:
+- **Date**: The date of the measurement.
+- **City**: The city where the measurement was taken.
+- **Pollutants**: `PM2.5`, `PM10`, `NO2`, `SO2`, `CO`, etc.
+- **AQI**: The Air Quality Index, which is the target variable for prediction.
 
-This project leverages **time series analysis** to predict AQI values based on historical air quality data. The model can be used to:  
-- Forecast **future AQI levels** for different locations.  
-- Detect **seasonal and long-term trends** in air pollution.  
-- Provide **early warnings** for areas experiencing high pollution levels.  
+## Steps Performed
+1. **Data Preprocessing**:
+   - Handled missing values using forward and backward filling.
+   - Encoded categorical variables (e.g., `City`) for machine learning.
+   - Split the data into training and testing sets.
 
-## 🚀 Key Features  
+2. **Exploratory Data Analysis (EDA)**:
+   - Visualized AQI trends over time.
+   - Analyzed the distribution of AQI across cities.
+   - Studied correlations between pollutants and AQI.
 
-✅ **Data Preprocessing & Analysis** – Handles missing values, outliers, and normalizes AQI data for accurate predictions.  
+3. **Time Series Analysis**:
+   - Resampled data to observe monthly and yearly trends.
+   - Decomposed the time series into trend, seasonality, and residuals.
+   - Checked for stationarity using the Augmented Dickey-Fuller (ADF) test.
+   - Plotted autocorrelation (ACF) and partial autocorrelation (PACF) to identify lags for ARIMA modeling.
 
-✅ **Time Series Forecasting Models**:  
-   - **ARIMA (AutoRegressive Integrated Moving Average)** – Captures trends, seasonality, and stationarity in AQI data.  
-   - **LSTM (Long Short-Term Memory Networks)** – Uses deep learning to model complex temporal dependencies.  
-   - **Prophet Model** – A robust model for forecasting AQI with trend and seasonality decomposition.  
+4. **Machine Learning Models**:
+   - Trained and evaluated models such as Linear Regression, Decision Trees, and Random Forests for AQI prediction.
+   - Performed hyperparameter tuning to optimize model performance.
 
-✅ **Visualization & Insights** – Generates **interactive plots** to display AQI trends and model performance.  
+5. **Time Series Forecasting**:
+   - Built an ARIMA model to forecast future AQI values.
+   - Visualized the forecasted AQI trends.
 
-✅ **Real-Time AQI Updates** – Can be integrated with APIs to fetch live air quality data and improve predictions.  
+## Key Insights
+- **Trends**: AQI shows seasonal patterns, with higher pollution levels during certain months.
+- **Correlations**: Pollutants like `PM2.5` and `PM10` have a strong positive correlation with AQI.
+- **City-wise Analysis**: Some cities consistently have higher AQI values, indicating poorer air quality.
+- **Forecasting**: The ARIMA model provides reliable forecasts for future AQI trends.
 
+## Tools and Libraries Used
+- **Python**: Primary programming language.
+- **Pandas**: Data manipulation and analysis.
+- **NumPy**: Numerical computations.
+- **Matplotlib & Seaborn**: Data visualization.
+- **Scikit-learn**: Machine learning models.
+- **Statsmodels**: Time series analysis and ARIMA modeling.
 
-
-## 🛠 Tech Stack  
-
-📌 **Programming Language**: Python  
-📌 **Libraries Used**: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Statsmodels, Prophet  
-📌 **Model Deployment**: Flask (for API), Streamlit (for visualization)  
-
-
+## How to Run the Code
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/HarshiSharma04/AQI_Predictor_using_Time_Series_Analysis.git
